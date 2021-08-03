@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.zup.edu";
+option java_outer_classname = "MicronautGrpcTesting";
+option objc_class_prefix = "HLW";
+
+package br.com.zup.edu;
+
+service MicronautGrpcTestingService {
+  rpc send (MicronautGrpcTestingRequest) returns (MicronautGrpcTestingReply) {}
+}
+
+message MicronautGrpcTestingRequest {
+  string name = 1;
+}
+
+message MicronautGrpcTestingReply {
+  string message = 1;
+}
