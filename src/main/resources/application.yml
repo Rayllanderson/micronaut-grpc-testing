@@ -1,3 +1,18 @@
 micronaut:
   application:
     name: micronautGrpcTesting
+
+datasources:
+  default:
+    url: ${DB_URL:`jdbc:postgresql://localhost:5432/grpc`}
+    driverClassName: org.postgresql.Driver
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:12345}
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
